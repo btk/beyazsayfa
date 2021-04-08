@@ -17,9 +17,8 @@ export default function Blog({ blog, moreBlogs, coin }) {
   return (
     <Layout>
       <SEO title={`${blog.title} - Beyaz Sayfa`}/>
-
       <Link href={`/coin/${coin.slug}`}>
-        <a className={markdownStyles.gameSection}>
+        <a className="coinHolder">
           <div>
             <img
               alt={`Icon for ${coin.title}`}
@@ -27,12 +26,11 @@ export default function Blog({ blog, moreBlogs, coin }) {
             />
           </div>
           <div>
-            <h3>{coin.title}</h3>
-            <span className="gameSubSmall">{coin.excerpt}</span>
+            <h3>{coin.title} <span style={{opacity: 0.5}}>({coin.slug})</span></h3>
+            <span>{coin.excerpt}</span>
           </div>
         </a>
       </Link>
-
       <h1>{blog.title}</h1>
       <BlockContent blocks={blog.content} className={markdownStyles.markdown}/>
 

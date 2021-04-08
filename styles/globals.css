@@ -45,6 +45,26 @@ h1, h2, h3, h4 {
   line-height: 1.4em;
 }
 
+.header {
+  margin:20px auto;max-width:1000px;padding:13px;padding-top:0;margin-bottom:0
+}
+
+.coinHolder {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+}
+
+.coinHolder h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.coinHolder div {
+  margin-right: 10px;
+}
+
+
 
 @media only screen and (max-width: 600px) {
 
