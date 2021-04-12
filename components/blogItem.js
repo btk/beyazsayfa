@@ -8,7 +8,7 @@ export default function Component({blog}) {
         <a>
           <img
             alt={`Cover Image for ${blog.title}`}
-            src={imageBuilder.image(blog.coverImage).height(350).width(350).url()}
+            src={imageBuilder.image(blog.coverImage).height(150).width(150).url()}
           />
           <div>
             <h2>{blog.title}</h2>

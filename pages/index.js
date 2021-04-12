@@ -10,7 +10,7 @@ export default function Home({ allBlogs }) {
   return (
     <Layout headerBorder={true}>
       <SEO title="Beyaz Sayfa - Kripto'ya beyaz sayfa açın!" description="Kripto'ya beyaz sayfa açın!"/>
-      <h1>Blog Yazıları</h1>
+      <h1>Blog Yazıları <span style={{fontSize: 15}}>(BETA)</span></h1>
       <p style={{height: 2}}></p>
       <div className="blogList">
         {
