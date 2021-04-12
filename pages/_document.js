@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86295876-1"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98344633-4"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -21,7 +21,7 @@ class MyDocument extends Document {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-60987747-1');
+          gtag('config', 'UA-98344633-4');
           `
             }}
           />
