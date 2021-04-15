@@ -69,6 +69,12 @@ export async function getBlog(slug) {
     { slug }
   );
 
+
+  for (var i = 0; i < moreBlogs.length; i++) {
+    moreBlogs[i].coin = (await getCoin(moreBlogs[i].coin)).coin;
+    moreBlogs[i].excerpt = moreBlogs[i].content[0].children[0].text;
+  }
+
   const coin = await curClient.fetch(
     `*[_type == "coin" && slug.current == '${blog.coin}'] | order(date desc, _updatedAt desc){
       title,
