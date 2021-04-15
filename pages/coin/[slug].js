@@ -14,10 +14,6 @@ export default function Coin({ coin, blogs }) {
     return null;
   }
 
-  if(typeof window != "undefined"){
-    coinRedirect(coin.appstore,coin.googleplay);
-  }
-
   return (
     <Layout>
       <SEO title={`${coin.title} ile ilgili Yazılar - Beyaz Sayfa`} description={coin.excerpt}/>

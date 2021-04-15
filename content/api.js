@@ -18,9 +18,8 @@ const blogFields = `
   title,
   date,
   coin,
-  excerpt,
+  content,
   'slug': slug.current,
-  'coverImage': coverImage.asset->url,
 `
 
 // dont forget the comma at the end of this template string
@@ -45,6 +44,12 @@ export async function getAllBlogs(preview) {
     .fetch(`*[_type == "blog"] | order(date desc, _updatedAt desc){
       ${blogFields}
     }`)
+
+  for (var i = 0; i < results.length; i++) {
+    results[i].coin = (await getCoin(results[i].coin)).coin;
+    results[i].excerpt = results[i].content[0].children[0].text;
+  }
+
   return getUnique(results)
 }
 
@@ -53,7 +58,6 @@ export async function getBlog(slug) {
   const blog = await curClient.fetch(
       `*[_type == "blog" && slug.current == $slug] | order(_updatedAt desc) {
       ${blogFields}
-      content,
     }`,
       { slug }
     )

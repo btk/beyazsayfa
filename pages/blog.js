@@ -11,7 +11,7 @@ export default function Blog({ allBlogs }) {
 
   return (
     <Layout>
-      <SEO title="Blog - Stratera Games" description="En son çalışmalarımızı ve duyurularımızı sizinle paylaştığımız en son blog yazılarımız."/>
+      <SEO title="Blog - Beyaz Sayfa" description="En son çalışmalarımızı ve duyurularımızı sizinle paylaştığımız en son blog yazılarımız."/>
       <h1>Blog Yazıları</h1>
       <p style={{height: 2}}></p>
       <div className="blogList">
