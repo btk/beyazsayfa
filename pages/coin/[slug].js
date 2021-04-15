@@ -31,24 +31,9 @@ export default function Coin({ coin, blogs }) {
         <div>
           <h1>{coin.title}</h1>
           <p>{coin.excerpt}</p>
-          <div className="download">
-            <a href={coin.appstore}><img src="/as.svg" style={{opacity: coin.appstore ? 1 : 0.5}} alt="Download on App Store"/></a>
-            <div style={{width: 10}}></div>
-            <a href={coin.googleplay}><img src="/gp.svg" style={{opacity: coin.googleplay ? 1 : 0.5}} alt="Download on Google Play"/></a>
-          </div>
         </div>
       </div>
-      <BlockContent blocks={coin.content} className={markdownStyles.markdown}/>
-      {coin.credits &&
-        <>
-          <div style={{height: 5}}></div>
-          <h2>Teşekkürler</h2>
-          <BlockContent blocks={coin.credits} className={markdownStyles.markdown}/>
-        </>
-      }
 
-      <div style={{height: 10}}></div>
-      <h2>Oyundan Blog Yazıları</h2>
       {blogs.length > 0 &&
         <div className="blogList">
           {blogs.map((blog, i) => {

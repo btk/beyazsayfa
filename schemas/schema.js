@@ -36,16 +36,6 @@ export default createSchema({
           of: [{ type: 'block' }],
         },
         {
-          name: 'excerpt',
-          title: 'Excerpt',
-          type: 'string',
-        },
-        {
-          name: 'coverImage',
-          title: 'Cover Image',
-          type: 'image',
-        },
-        {
           name: 'date',
           title: 'Date',
           type: 'datetime',
@@ -84,11 +74,6 @@ export default createSchema({
           name: 'coverImage',
           title: 'Cover Image',
           type: 'image',
-        },
-        {
-          name: 'date',
-          title: 'Date',
-          type: 'datetime',
         }
       ],
     }

@@ -33,13 +33,6 @@ export default function Blog({ blog, moreBlogs, coin }) {
       </Link>
       <h1>{blog.title}</h1>
       <BlockContent blocks={blog.content} className={markdownStyles.markdown}/>
-
-      <img
-        alt={`Cover Image for ${blog.title}`}
-        src={imageBuilder.image(blog.coverImage).width(600).url()}
-        style={{marginBottom: 20}}
-      />
-
       <div style={{height: 30}}></div>
       <h2>Diğer Yazılar</h2>
       {moreBlogs.length > 0 &&
