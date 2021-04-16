@@ -13,6 +13,9 @@ const getUnique = (contents) => {
   })
 }
 
+const timeElapsed = Date.now();
+const today = new Date(timeElapsed);
+
 const blogFields = `
   name,
   title,
@@ -41,7 +44,7 @@ export async function getAllBlogsWithCoin(slug) {
 
 export async function getAllBlogs(preview) {
   const results = await getClient(preview)
-    .fetch(`*[_type == "blog"] | order(date desc, _updatedAt desc){
+    .fetch(`*[_type == "blog" && date <= '${today.toISOString()}'] | order(date desc, _updatedAt desc){
       ${blogFields}
     }`)
 
