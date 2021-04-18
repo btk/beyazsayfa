@@ -64,6 +64,14 @@ h1, h2, h3, h4 {
   margin-right: 10px;
 }
 
+.button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  font-weight: bold;
+}
 
 
 @media only screen and (max-width: 600px) {

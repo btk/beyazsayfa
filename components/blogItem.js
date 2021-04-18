@@ -6,7 +6,7 @@ export default function Component({blog}) {
     <>
       <Link href={`/blog/${blog.slug}/`}>
         <a>
-          <div style={{paddingBottom: 15}}>
+          <div style={{paddingBottom: 30}}>
             <a className="coinHolder">
               <div>
                 <img
@@ -19,7 +19,8 @@ export default function Component({blog}) {
               </div>
             </a>
             <h2 style={{marginTop: 8}}>{blog.title}</h2>
-            <p>{blog.excerpt}</p>
+            <p style={{ textOverflow: "ellipsis", height: 90, overflow: "hidden", marginBottom: 7}}>{blog.excerpt}</p>
+            <div className="button">Devamını Oku</div>
           </div>
         </a>
       </Link>
