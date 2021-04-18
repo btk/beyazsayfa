@@ -15,7 +15,7 @@ export default function Component({blog}) {
                 />
               </div>
               <div>
-                <h3>{blog.coin.title} <span style={{opacity: 0.5}}>({blog.coin.slug})</span></h3>
+                <h3 style={{fontWeight: "500"}}>{blog.coin.title} <span style={{opacity: 0.5}}>({blog.coin.slug})</span></h3>
               </div>
             </a>
             <h2 style={{marginTop: 8}}>{blog.title}</h2>

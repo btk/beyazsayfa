@@ -13,6 +13,7 @@ export default function Blog({ blog, moreBlogs, coin }) {
   if (typeof blog == "undefined") {
     return null;
   }
+  var date = new Date(blog.date);
 
   return (
     <Layout>
@@ -22,10 +23,11 @@ export default function Blog({ blog, moreBlogs, coin }) {
           <div>
             <img
               alt={`Icon for ${coin.title}`}
-              src={imageBuilder.image(coin.coverImage).width(80).height(80).url()}
+              style={{paddingBottom: 0}}
+              src={imageBuilder.image(coin.coverImage).width(60).height(60).url()}
             />
           </div>
-          <div>
+          <div style={{display: "flex", flexDirection: "column", justifyContent: "center", marginBottom: 5}}>
             <h3>{coin.title} <span style={{opacity: 0.5}}>({coin.slug})</span></h3>
             <span>{coin.excerpt}</span>
           </div>
@@ -33,8 +35,10 @@ export default function Blog({ blog, moreBlogs, coin }) {
       </Link>
       <h1>{blog.title}</h1>
       <BlockContent blocks={blog.content} className={markdownStyles.markdown}/>
+      <p><em>{date.toLocaleDateString('tr-TR', {  year: 'numeric', month: 'long', day: 'numeric' })} tarihinde yayınlandı.</em></p>
+
       <div style={{height: 30}}></div>
-      <h2>Diğer Yazılar</h2>
+      <h1>Diğer Yazılar</h1>
       {moreBlogs.length > 0 &&
         <div className="blogList">
           {moreBlogs.map((blog, i) => {

@@ -74,8 +74,12 @@ export async function getBlog(slug) {
 
 
   for (var i = 0; i < moreBlogs.length; i++) {
-    moreBlogs[i].coin = (await getCoin(moreBlogs[i].coin)).coin;
-    moreBlogs[i].excerpt = moreBlogs[i].content[0].children[0].text;
+    console.log(moreBlogs[i].coin);
+    if(moreBlogs[i].coin){
+      moreBlogs[i].coin = (await getCoin(moreBlogs[i].coin)).coin;
+      moreBlogs[i].coin = moreBlogs[i].coin ? moreBlogs[i].coin : null;
+      moreBlogs[i].excerpt = moreBlogs[i].content[0].children[0].text;
+    }
   }
 
   const coin = await curClient.fetch(

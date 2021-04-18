@@ -28,10 +28,10 @@ a {
 p {
   padding: 0px;
   margin: 0px;
-  font-size: 1.3em;
-  line-height: 1.5em;
+  font-size: 18px;
+  line-height: 30px;
   margin-bottom: 18px;
-  max-width: 900px;
+  max-width: 700px;
   letter-spacing: 0px;
 }
 
